@@ -282,6 +282,8 @@ public class EditorActivity extends AppCompatActivity implements
         // Create and show the AlertDialog
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+            
+    
     }
 
     /**
@@ -301,6 +303,8 @@ public class EditorActivity extends AppCompatActivity implements
                 Toast.makeText(this, R.string.editor_delete_member_successful,Toast.LENGTH_LONG).show();
             }
         }
+        // Close the Activity
+        finish();
     }
 
 
@@ -329,10 +333,9 @@ public class EditorActivity extends AppCompatActivity implements
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
-
+                // Pop up confirmation dialog for delete
                 showDeleteConfirmationDialog();
-                // Exit Activity
-                finish();
+               
                 return true;
             // Respond to a click on the "Up" arrow button in the app bar
             case android.R.id.home:
